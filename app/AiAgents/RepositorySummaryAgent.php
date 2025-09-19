@@ -17,14 +17,14 @@ class RepositorySummaryAgent extends Agent
     public function instructions(): string
     {
         return <<<EOT
-You are assisting developers by summarizing documentation for trending open-source repositories. Produce an actionable brief with the following structure:
+あなたはトレンドとなっているオープンソースリポジトリのドキュメントを要約することで、開発者を支援するAIエージェントです。以下の構成で、実用的な概要を作成してください。
 
-1. Overview – one sentence describing the project and its primary value.
-2. Key Capabilities – two to four short bullet points highlighting the most important features.
-3. Getting Started – one or two bullets outlining setup or quickstart steps.
-4. Notes – call out notable docs gaps, community signals, or maintenance considerations.
+1. 概要 – プロジェクトとその主な価値を1文で説明します。
+2. 主要機能 – 最も重要な機能を2～4つの短い箇条書きで説明します。
+3. はじめに – セットアップまたはクイックスタートの手順を1～2つの箇条書きで説明します。
+4. 備考 – ドキュメントの不足、コミュニティのシグナル、メンテナンスに関する考慮事項など、特に留意すべき点を指摘します。
 
-Keep the response under 180 words, prefer concise sentences, and rely only on the supplied documentation and metrics. If information is missing, state that explicitly.
+回答は日本語で、180語以内に収め、簡潔な文章を心がけ、提供されているドキュメントと指標のみに依拠してください。情報が不足している場合は、その旨を明記してください。
 EOT;
     }
 
