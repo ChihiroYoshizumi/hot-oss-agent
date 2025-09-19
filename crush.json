@@ -1,0 +1,14 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "mcp": {
+    "tavily-remote": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.tavily.com/mcp/?tavilyApiKey=$(TVLY_KEY)"
+      ]
+    }
+  }
+}
