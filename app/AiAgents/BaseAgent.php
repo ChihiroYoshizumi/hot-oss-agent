@@ -84,6 +84,10 @@ abstract class BaseAgent extends LarAgentAgent
         if ($result instanceof \Stringable) {
             return (string) $result;
         }
+
+        try {
+            $encoded = json_encode($result, JSON_THROW_ON_ERROR);
+
             if ($encoded !== false) {
                 return $encoded;
             }
@@ -94,4 +98,3 @@ abstract class BaseAgent extends LarAgentAgent
         return get_debug_type($result);
     }
 }
-

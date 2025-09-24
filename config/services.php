@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'tavily' => [
+        'api_key' => env('TAVILY_API_KEY'),
+        'base_url' => env('TAVILY_BASE_URL', 'https://api.tavily.com'),
+        'timeout' => env('TAVILY_TIMEOUT', 15),
+    ],
+
 ];
