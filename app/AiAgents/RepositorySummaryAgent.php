@@ -2,6 +2,7 @@
 
 namespace App\AiAgents;
 
+use App\AiAgents\Tools\TavilySearchTool;
 use LarAgent\Agent;
 
 class RepositorySummaryAgent extends Agent
@@ -12,7 +13,9 @@ class RepositorySummaryAgent extends Agent
 
     protected $provider = 'default';
 
-    protected $tools = [];
+    protected $tools = [
+        TavilySearchTool::class,
+    ];
 
     public function instructions(): string
     {
@@ -24,7 +27,7 @@ class RepositorySummaryAgent extends Agent
 3. はじめに – セットアップまたはクイックスタートの手順を1～2つの箇条書きで説明します。
 4. 備考 – ドキュメントの不足、コミュニティのシグナル、メンテナンスに関する考慮事項など、特に留意すべき点を指摘します。
 
-回答は日本語で、180語以内に収め、簡潔な文章を心がけ、提供されているドキュメントと指標のみに依拠してください。情報が不足している場合は、その旨を明記してください。
+回答は日本語で、180語以内に収め、簡潔な文章を心がけ、提供されているドキュメントを基本的な情報ソースとしてください。。情報が不足している場合は、web検索などを用いてgithubリポジトリ以外からも積極的に情報を収集してください。
 EOT;
     }
 
