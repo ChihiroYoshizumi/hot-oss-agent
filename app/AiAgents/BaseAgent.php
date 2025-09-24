@@ -84,13 +84,6 @@ abstract class BaseAgent extends LarAgentAgent
         if ($result instanceof \Stringable) {
             return (string) $result;
         }
-
-        if (is_object($result) && method_exists($result, '__toString')) {
-            return (string) $result;
-        }
-
-        try {
-            $encoded = json_encode($result, JSON_UNESCAPED_UNICODE | JSON_PARTIAL_OUTPUT_ON_ERROR);
             if ($encoded !== false) {
                 return $encoded;
             }
