@@ -3,9 +3,8 @@
 namespace App\AiAgents;
 
 use App\AiAgents\Tools\TavilySearchTool;
-use LarAgent\Agent;
 
-class RepositorySummaryAgent extends Agent
+class RepositorySummaryAgent extends BaseAgent
 {
     protected $model = 'gpt-4o-mini';
 
