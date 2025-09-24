@@ -2,9 +2,7 @@
 
 namespace App\AiAgents;
 
-use LarAgent\Agent;
-
-class RepositorySummaryAgent extends Agent
+class RepositorySummaryAgent extends BaseAgent
 {
     protected $model = 'gpt-4o-mini';
 
