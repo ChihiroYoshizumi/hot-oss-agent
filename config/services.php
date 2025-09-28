@@ -41,4 +41,13 @@ return [
         'timeout' => env('TAVILY_TIMEOUT', 15),
     ],
 
+    'x' => [
+        'api_key' => env('X_API_KEY'),
+        'api_secret' => env('X_API_SECRET'),
+        'auth_url' => env('X_API_AUTH_URL', 'https://api.x.com/oauth2/token'),
+        'base_url' => env('X_API_BASE_URL', 'https://api.x.com/2'),
+        'timeout' => env('X_API_TIMEOUT', 15),
+        'default_max_results' => env('X_API_DEFAULT_MAX_RESULTS', 20),
+    ],
+
 ];
