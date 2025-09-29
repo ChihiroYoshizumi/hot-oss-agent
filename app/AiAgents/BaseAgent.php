@@ -37,6 +37,20 @@ abstract class BaseAgent extends LarAgentAgent
         return parent::afterToolExecution($tool, $result);
     }
 
+    protected function onEngineError(\Throwable $th): void
+    {
+        Log::error('agent_engine_error', [
+            'agent' => class_basename(static::class),
+            'provider' => $this->provider ?? null,
+            'model' => $this->model(),
+            'message' => $th->getMessage(),
+            'code' => $th->getCode(),
+            'exception' => $th,
+        ]);
+
+        parent::onEngineError($th);
+    }
+
     private function logTokenUsage(array $usage): void
     {
         Log::info('agent_usage', [
