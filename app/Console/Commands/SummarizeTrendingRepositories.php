@@ -28,7 +28,7 @@ class SummarizeTrendingRepositories extends Command
      */
     protected $signature = 'oss:trending-summaries
                             {--period=past_24_hours : 集計期間 (past_24_hours|past_week|past_month|past_3_months)}
-                            {--language=All : 対象言語}
+                            {--language=All : 対象言語：Possible values: [All, JavaScript, Java, Python, PHP, C++, C#, TypeScript, Shell, C, Ruby, Rust, Go, Kotlin, HCL, PowerShell, CMake, Groovy, PLpgSQL, TSQL, Dart, Swift, HTML, CSS, Elixir, Haskell, Solidity, Assembly, R, Scala, Julia, Lua, Clojure, Erlang, Common Lisp, Emacs Lisp, OCaml, MATLAB, Objective-C, Perl, Fortran]}
                             {--limit=3 : 取得するリポジトリ数 (1-'.self::MAX_LIMIT.')}';
 
     /**

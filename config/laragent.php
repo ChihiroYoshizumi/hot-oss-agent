@@ -62,6 +62,15 @@ return [
             'default_max_completion_tokens' => 131072,
             'default_temperature' => 1,
         ],
+
+        'upstage' => [
+            'label' => 'upstage',
+            'api_key' => env('UPSTAGE_API_KEY'),
+            'driver' => App\Drivers\UpStageProvider\UpStageDriver::class,
+            'default_context_window' => 50000,
+            'default_max_completion_tokens' => 10000,
+            'default_temperature' => 1,
+        ]
     ],
 
     /**
