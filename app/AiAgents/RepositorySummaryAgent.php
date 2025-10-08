@@ -6,11 +6,11 @@ use App\AiAgents\Tools\TavilySearchTool;
 
 class RepositorySummaryAgent extends BaseAgent
 {
-    protected $model = 'solar-mini';
+    protected $model = 'gpt-4o-mini';
 
     protected $history = 'in_memory';
 
-    protected $provider = 'upstage';
+    protected $provider = 'default';
 
     protected $tools = [
         TavilySearchTool::class,
